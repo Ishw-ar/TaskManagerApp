@@ -38,11 +38,11 @@ You can also take the glimpse of our Project, just follow the below steps:
 
   <p float="left">
   
-  <img src="https://user-images.githubusercontent.com/66674082/126701173-53620834-b7ee-4355-9398-58bd69441273.png" width="250" />
+  <img src="https://user-images.githubusercontent.com/75352515/130686470-d52df8f1-e3ec-43cb-8f47-09529f221236.jpg" width="250" />
  
-  <img src="https://user-images.githubusercontent.com/66674082/126701245-f1313eb1-a799-4bd4-8ee1-34f2a4d8e9dd.png" width="250" /> 
+  <img src="https://user-images.githubusercontent.com/75352515/130686557-fb7b8180-93a4-407a-a745-190cd6af2e1f.jpg" width="250" /> 
   
-  <img src="https://user-images.githubusercontent.com/66674082/126701302-1897ffe4-3dff-43aa-9225-0a3e971734da.png" width="250" />
+  <img src="https://user-images.githubusercontent.com/75352515/130686631-c5f01909-6169-4005-a4f9-fc1f21c07b1d.jpg" width="250" />
 </p>
  
 
