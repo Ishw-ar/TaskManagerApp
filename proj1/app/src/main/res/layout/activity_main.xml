@@ -3,32 +3,132 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
     tools:context=".data.views.MainActivity">
-    <EditText
-        android:id="@+id/etTitle"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:hint="Enter title"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:padding="12dp"
-        android:layout_marginTop="10dp"
-        android:hint="Enter Description"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:text="Add Task"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/task_background">
+
+        <TextView
+            android:id="@+id/textAddTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="Add task"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageTitle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_baseline_subtitles_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textAddTask"
+            app:tint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="Enter title"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="40dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorHint"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageTitle"
+            app:layout_constraintEnd_toEndOf="@id/textAddTask"
+            app:layout_constraintStart_toEndOf="@id/imageTitle"
+            app:layout_constraintTop_toTopOf="@id/imageTitle" />
+
+        <View
+            android:id="@+id/viewDividerTitle"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorHint"
+            app:layout_constraintEnd_toEndOf="@id/textAddTask"
+            app:layout_constraintStart_toStartOf="@id/textAddTask"
+            app:layout_constraintTop_toBottomOf="@id/etTitle" />
+
+        <ImageView
+            android:id="@+id/imageDescription"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_baseline_description_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerTitle"
+            app:tint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="Enter description"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="40dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorHint"
+            android:textSize="16sp"
+           android:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="@id/imageDescription"
+            app:layout_constraintEnd_toEndOf="@id/textAddTask"
+            app:layout_constraintStart_toEndOf="@id/imageDescription"
+            app:layout_constraintTop_toTopOf="@id/imageDescription" />
+
+        <View
+            android:id="@+id/viewDividerDescription"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorHint"
+            app:layout_constraintEnd_toEndOf="@id/textAddTask"
+            app:layout_constraintStart_toStartOf="@id/textAddTask"
+            app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+        <ImageView
+            android:id="@+id/btnAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_background"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerDescription"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
         android:id="@+id/recyclerView"
-        android:layout_height="match_parent"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
