@@ -1,4 +1,4 @@
-package com.varsha.taskmanagerapp.data.views.database
+package com.varsha.taskmanagerapp.data.views.interfaces
 
 import com.varsha.taskmanagerapp.data.views.data.TaskEntity
 

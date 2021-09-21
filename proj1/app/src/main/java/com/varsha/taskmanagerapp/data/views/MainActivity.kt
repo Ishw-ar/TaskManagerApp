@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.varsha.taskmanagerapp.R
 import com.varsha.taskmanagerapp.data.views.data.TaskEntity
-import com.varsha.taskmanagerapp.data.views.database.OnRowClicked
-import com.varsha.taskmanagerapp.data.views.database.TaskAdapter
+import com.varsha.taskmanagerapp.data.views.interfaces.OnRowClicked
+import com.varsha.taskmanagerapp.data.views.adapters.TaskAdapter
 import com.varsha.taskmanagerapp.data.views.viewmodels.MyViewModelFactory
 import com.varsha.taskmanagerapp.data.views.viewmodels.MyViewModels
 import com.varsha.taskmanagerapp.data.views.views.ApplicationClass
@@ -18,7 +18,7 @@ import com.varsha.taskmanagerapp.databinding.EditDialogLayoutBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity(),OnRowClicked {
+class MainActivity : AppCompatActivity(), OnRowClicked {
 
    private lateinit var viewModels: MyViewModels
     val tasks= mutableListOf<TaskEntity>()

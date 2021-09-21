@@ -9,6 +9,8 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [TaskEntity::class],version = 1)
 abstract class TaskDatabase :RoomDatabase(){
+
+    //This fun is responsible for creating object of Dao class
     abstract fun getTaskDAO():TaskDAO
 
 

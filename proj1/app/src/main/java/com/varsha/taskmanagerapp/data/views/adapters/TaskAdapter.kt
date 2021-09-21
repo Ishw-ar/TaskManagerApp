@@ -1,4 +1,4 @@
-package com.varsha.taskmanagerapp.data.views.database
+package com.varsha.taskmanagerapp.data.views.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.varsha.taskmanagerapp.R
 import com.varsha.taskmanagerapp.data.views.data.TaskEntity
+import com.varsha.taskmanagerapp.data.views.interfaces.OnRowClicked
 import kotlinx.android.synthetic.main.task_item.view.*
 
-class TaskAdapter(val tasklist:List<TaskEntity>,val listener:OnRowClicked)
+class TaskAdapter(val tasklist:List<TaskEntity>,val listener: OnRowClicked)
     :RecyclerView.Adapter<TaskAdapter.TaskViewHolder>(){
 
     inner class TaskViewHolder(itemView: View):RecyclerView.ViewHolder(itemView)
